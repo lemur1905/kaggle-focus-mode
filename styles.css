@@ -1,0 +1,44 @@
+/* Hide both fixed navs (left sidebar + top header) */
+.kaggle-focus-mode #root > nav {
+  display: none !important;
+}
+
+/* Make #site-content fill the full viewport */
+.kaggle-focus-mode #site-content {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  margin: 0 !important;
+}
+
+/* Hide footer */
+.kaggle-focus-mode #nav-footer {
+  display: none !important;
+}
+
+/* Hide right sidebar */
+.kaggle-focus-mode [data-kaggle-focus="sidebar"] {
+  display: none !important;
+}
+
+/* Hide banner, tab bar, and other chrome above content */
+.kaggle-focus-mode [data-kaggle-focus="chrome"] {
+  display: none !important;
+}
+
+/* Make grid single-column, full-width */
+.kaggle-focus-mode [data-kaggle-focus="grid"] {
+  grid-template-columns: 1fr !important;
+  padding: 1.5rem 2rem !important;
+}
+
+/* Expand all content containers to full width */
+.kaggle-focus-mode #site-content [role="main"],
+.kaggle-focus-mode #site-content > div > div,
+.kaggle-focus-mode #site-content > div > div > div {
+  max-width: 100% !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+}
